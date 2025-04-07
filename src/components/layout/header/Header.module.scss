@@ -1,0 +1,59 @@
+@font-face {
+  font-family: "font";
+  src: url("./../../../assets/fonts/SilkSerif-TRIAL-Regular-BF6740066e17571.ttf")
+    format("woff2");
+  font-style: normal;
+}
+
+.Header {
+  .content {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    padding: 20px 58px;
+    #logo {
+      font-family: "font";
+      color: rgba(255, 255, 255, 1);
+      font-size: 28px;
+      font-weight: 500;
+    }
+    .links {
+      display: flex;
+      gap: 82px;
+      .link {
+        color: white;
+        font-weight: 300;
+        font-size: 16px;
+        text-transform: capitalize;
+      }
+    }
+
+    .Search {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      background-color: rgba(239, 39, 44, 1);
+      padding: 5px 10px;
+      height: 37;
+      border-radius: 8px;
+      border-width: 0.8px;
+      opacity: 0.8;
+      gap: 10px;
+
+      input {
+        background: rgba(239, 39, 44, 1);
+        color: white;
+        outline-style: none;
+        border: none;
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 100%;
+        text-transform: capitalize;
+      }
+      input::placeholder {
+        color: white;
+      }
+    }
+  }
+}

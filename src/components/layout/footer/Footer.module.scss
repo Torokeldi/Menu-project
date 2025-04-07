@@ -1,0 +1,38 @@
+.Footer {
+  background: rgba(18, 18, 18, 1);
+  text-align: center;
+  padding-bottom: 30px;
+  .content {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 0;
+    border-bottom: 1px solid white;
+    #logo {
+      font-family: "font";
+      color: rgba(255, 255, 255, 1);
+      font-size: 28px;
+      font-weight: 500;
+    }
+    .links {
+      display: flex;
+      gap: 82px;
+      .link {
+        color: white;
+        font-weight: 300;
+        font-size: 16px;
+        text-transform: capitalize;
+      }
+    }
+    .socialMedias {
+      display: flex;
+      flex-direction: row;
+      gap: 20px;
+      .app {
+        width: 24px;
+        height: 24px;
+      }
+    }
+  }
+}
