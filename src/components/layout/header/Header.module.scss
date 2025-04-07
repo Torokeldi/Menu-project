@@ -10,7 +10,7 @@
     display: flex;
     flex-direction: row;
     align-items: center;
-    justify-content: space-around;
+    justify-content: space-between;
     padding: 20px 58px;
     #logo {
       font-family: "font";
@@ -28,31 +28,35 @@
         text-transform: capitalize;
       }
     }
-
-    .Search {
+    .actions {
       display: flex;
-      flex-direction: row;
       align-items: center;
-      background-color: rgba(239, 39, 44, 1);
-      padding: 5px 10px;
-      height: 37;
-      border-radius: 8px;
-      border-width: 0.8px;
-      opacity: 0.8;
-      gap: 10px;
+      gap: 100px;
+      .Search {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        background-color: rgba(239, 39, 44, 1);
+        padding: 5px 10px;
+        height: 37;
+        border-radius: 8px;
+        border-width: 0.8px;
+        opacity: 0.8;
+        gap: 10px;
 
-      input {
-        background: rgba(239, 39, 44, 1);
-        color: white;
-        outline-style: none;
-        border: none;
-        font-weight: 400;
-        font-size: 14px;
-        line-height: 100%;
-        text-transform: capitalize;
-      }
-      input::placeholder {
-        color: white;
+        input {
+          background: rgba(239, 39, 44, 1);
+          color: white;
+          outline-style: none;
+          border: none;
+          font-weight: 400;
+          font-size: 14px;
+          line-height: 100%;
+          text-transform: capitalize;
+        }
+        input::placeholder {
+          color: white;
+        }
       }
     }
   }

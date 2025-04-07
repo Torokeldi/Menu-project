@@ -1,0 +1,170 @@
+@import url("https://fonts.googleapis.com/css2?family=League+Spartan:wght@100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Pixelify+Sans:wght@400..700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Rubik:ital,wght@0,300..900;1,300..900&family=Shalimar&display=swap");
+
+.FirstPage {
+  background-image: linear-gradient(
+      180deg,
+      rgba(27, 32, 38, 0.4) 46.81%,
+      rgba(27, 32, 38, 0.8) 100.67%
+    ),
+    url("https://s3-alpha-sig.figma.com/img/4d32/a684/7f1e8f5dc71cb5f6dbeadcbe52587e2d?Expires=1745193600&Key-Pair-Id=APKAQ4GOSFWCW27IBOMQ&Signature=uYZv13iusq6s1EEt1IPQ7V5Qvtpv0HVZupv5GJwyBBIaoJUYSWDzvfnVXWxOoa8WQXkcusjgL6lqP6Mn2ePoeJr75d6SRb-V1fiVB3JW2s5z1lMRSvWgh-X9rx3HjtJpUo8Gkaw2QcB4BWGJCqcpT7kxJ-VSMKGuCOJSMjLRwTF9punf33cMay1NuFXSjC0qljOqcXkNkrjktsmqp8HwuLPRdRTQvtugtSt3MF2TRwpeT~JiqpAniJWkFUCoqJe7~qBPt89qG7t1EGG0NBvuIm1JMGKESIDhShBOPhuVBjrPx~OLQ6nd~s1xWnjHo5VxiDy9hgKil1Z7LxvwTYWJaQ__");
+  width: 100%;
+  height: 780px;
+  background-size: cover;
+
+  object-fit: cover;
+  background-position: center;
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  .content {
+    position: relative;
+    display: flex;
+    height: 650;
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+    justify-content: center;
+    .FirstText {
+      span {
+        margin: 0px 39px;
+        font-family: "Shalimar";
+        font-weight: 400;
+        font-size: 45px;
+        line-height: 100%;
+        letter-spacing: 0%;
+      }
+    }
+    h1 {
+      font-family: "Silk Serif";
+      font-weight: 100;
+      font-size: 74px;
+      line-height: 100%;
+      letter-spacing: 0%;
+    }
+    p {
+      font-family: Spartan;
+      font-weight: 100;
+      font-size: 20px;
+      line-height: 100%;
+    }
+
+    .button {
+      position: relative;
+      display: inline-block;
+      padding: 10px 0;
+
+      &::before,
+      &::after {
+        content: "";
+        position: absolute;
+        left: 50%;
+        width: 80%; // 👈 controls line length
+        height: 2px;
+        background-color: rgba(239, 39, 44, 1);
+        transform: translateX(-50%);
+      }
+
+      &::before {
+        top: 0;
+      }
+
+      &::after {
+        bottom: 0;
+      }
+
+      button {
+        padding: 0px 10px;
+        border: 2 solid rgba(239, 39, 44, 1);
+        width: 240px;
+        height: 42px;
+        background: transparent;
+        color: white;
+        font-family: "Spartan", sans-serif;
+        font-weight: 400;
+        font-size: 14px;
+        cursor: pointer;
+        position: relative;
+        z-index: 1;
+        text-transform: uppercase;
+      }
+    }
+    .Contact {
+      z-index: 99;
+      bottom: 150;
+      position: absolute;
+      flex-direction: column;
+      justify-content: center;
+      background: rgba(27, 32, 38, 1);
+      width: 335;
+      height: 339;
+      border-radius: 8px;
+      padding: 0px 23px;
+      gap: 35px;
+
+      .contact {
+        display: flex;
+        align-items: center;
+
+        gap: 10px;
+        .input {
+          display: flex;
+          flex-direction: column-reverse;
+          align-items: baseline;
+          gap: 5px;
+
+          input {
+            background: transparent;
+            border: none;
+            outline: none;
+            color: white;
+          }
+
+          input::placeholder {
+            font-family: "League Spartan";
+            color: rgba(187, 187, 187, 1);
+            font-weight: 400;
+            font-size: 17px;
+          }
+        }
+      }
+      button {
+        width: 290;
+        height: 59;
+        border-radius: 4px;
+        background: rgba(239, 39, 44, 1);
+        border: none;
+        color: white;
+        font-weight: 500;
+        font-size: 17px;
+      }
+    }
+  }
+  .UnderText {
+    margin: 20px 56px;
+    padding: 20px 0;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: last baseline;
+    border-bottom: 0.2px solid rgb(75, 74, 74);
+    h2 {
+      font-weight: 400;
+      font-size: 20px;
+      line-height: 100%;
+      text-transform: capitalize;
+    }
+    .line {
+      width: 56;
+      height: 1px;
+      border-width: 10px;
+      background: rgb(123, 123, 123);
+    }
+    .left {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      gap: 20px;
+    }
+  }
+}

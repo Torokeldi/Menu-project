@@ -22,11 +22,13 @@ const Header = () => {
             Contacts
           </Link>
         </div>
-        <div className={scss.Search}>
-          <Image src={search} alt="" />
-          <input placeholder="Search" type="text" />
+        <div className={scss.actions}>
+          <div className={scss.Search}>
+            <Image src={search} alt="" />
+            <input placeholder="Search" type="text" />
+          </div>
+          <span>EN</span>
         </div>
-        <span>EN</span>
       </div>
     </div>
   );
