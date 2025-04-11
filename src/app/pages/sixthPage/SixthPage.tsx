@@ -1,13 +1,12 @@
 "use client";
-
 import Image from "next/image";
 import scss from "./SixthPage.module.scss";
 import Line from "../../../assets/images/Frame 10.png";
 import arrow from "../../../assets/images/arrow-right.svg";
 import phoneNumber from "../../../assets/images/SF Symbol.png";
 import email from "../../../assets/images/email.png";
-import telegram from "../../../assets/images/telegram.png";
-import instagram from "../../../assets/images/instagram.png";
+import telegram from "../../../assets/images/Telegram.png";
+import instagram from "../../../assets/images/Instagram.png";
 import dynamic from "next/dynamic";
 
 const Map = dynamic(() => import("../../../components/Map"), { ssr: false });
