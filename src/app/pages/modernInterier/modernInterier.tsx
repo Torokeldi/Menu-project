@@ -1,6 +1,6 @@
 "use client";
 import React from "react";
-import scss from "./ModernInterier.module.scss";
+import scss from "./ModernInterior.module.scss";
 import Image from "next/image";
 import left from "@/assets/images/Frame 10.png";
 import right from "@/assets/images/Frame 9.png";
@@ -12,7 +12,7 @@ import images_5 from "@/assets/modern interior/images_5.png";
 
 const ModernInterier = () => {
   return (
-    <section className={scss.ModernInterier} id="interior">
+    <section className={scss.ModernInterior} id="interior">
       <div className="container">
         <div className={scss.content}>
           <div className={scss.modern}>

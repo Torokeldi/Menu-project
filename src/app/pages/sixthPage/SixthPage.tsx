@@ -47,7 +47,9 @@ const SixthPage = () => {
               <Image src={telegram} alt="" />
               <Image src={instagram} alt="" />
             </div>
-            <Map />
+            <div className={scss.map}>
+              <Map />
+            </div>
           </div>
         </div>
       </div>

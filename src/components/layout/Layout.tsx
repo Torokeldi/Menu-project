@@ -1,4 +1,3 @@
-
 import FirstPage from "@/app/pages/firstPage/FirstPage";
 import Footer from "./footer/Footer";
 import Header from "./header/Header";
@@ -7,7 +6,7 @@ import MainMenu from "@/app/pages/menuSections/MainMenu";
 import SixthPage from "@/app/pages/sixthPage/SixthPage";
 import AboutUs from "@/app/pages/AboutUs/AboutUs";
 import BestSellers from "@/app/pages/BestSellers/BestSellers";
-import ModernInterier from "@/app/pages/modernInterier/modernInterier";
+import ModernInterier from "@/app/pages/modernInterier/ModernInterier";
 
 const Layout = () => {
   return (
@@ -15,10 +14,10 @@ const Layout = () => {
       <Header />
       <main>
         <FirstPage />
-        <MainMenu/>
-        <ModernInterier/>
         <AboutUs />
         <BestSellers />
+        <MainMenu />
+        <ModernInterier />
         <SixthPage />
       </main>
       <Footer />
