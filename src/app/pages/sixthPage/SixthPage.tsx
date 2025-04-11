@@ -1,3 +1,5 @@
+"use client";
+
 import Image from "next/image";
 import scss from "./SixthPage.module.scss";
 import Line from "../../../assets/images/Frame 10.png";
@@ -6,26 +8,11 @@ import phoneNumber from "../../../assets/images/SF Symbol.png";
 import email from "../../../assets/images/email.png";
 import telegram from "../../../assets/images/telegram.png";
 import instagram from "../../../assets/images/instagram.png";
-import L from "leaflet";
-import "leaflet/dist/leaflet.css";
-import scss from "./SixthPage.module.scss";
-import { useEffect } from "react";
+import dynamic from "next/dynamic";
+
+const Map = dynamic(() => import("../../../components/Map"), { ssr: false });
 
 const SixthPage = () => {
-  useEffect(() => {
-    const map = L.map("map", {
-      center: [34.1522, -118.1445], 
-      zoom: 15,
-    });
-
-    L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
-      attribution:
-        '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',
-    }).addTo(map);
-
-    L.marker([34.1522, -118.1445]).addTo(map).bindPopup("Наше местоположение");
-  }, []);
-
   return (
     <div className={scss.SixthPage}>
       <div className="container">
@@ -33,7 +20,6 @@ const SixthPage = () => {
           <div className={scss.text}>
             <div className={scss.uniqueText}>
               <Image src={Line} alt="" />
-
               <span>Visit Restaurant</span>
             </div>
             <h1>Join Us for Happy Hours</h1>
@@ -62,11 +48,7 @@ const SixthPage = () => {
               <Image src={telegram} alt="" />
               <Image src={instagram} alt="" />
             </div>
-
-            <div
-              id="map"
-              style={{ width: "100%", height: "400px", borderRadius: "1.7px" }}
-            ></div>
+            <Map />
           </div>
         </div>
       </div>
