@@ -160,11 +160,25 @@
       border-width: 10px;
       background: rgb(123, 123, 123);
     }
-    .left {
+    .left,
+    .right {
       display: flex;
       flex-direction: row;
       align-items: center;
       gap: 20px;
+    }
+  }
+}
+
+@media (max-width: 372px) {
+  .FirstPage {
+    max-width: 372px;
+    width: 100%;
+    .UnderText {
+      .left,
+      .right {
+        flex-direction: column;
+      }
     }
   }
 }

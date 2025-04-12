@@ -12,6 +12,7 @@
     justify-content: space-between;
     padding: 20px 0;
     border-bottom: 1px solid white;
+    margin-bottom: 20px;
     #logo {
       font-family: "font";
       color: rgba(255, 255, 255, 1);
@@ -35,6 +36,18 @@
       .app {
         width: 24px;
         height: 24px;
+      }
+    }
+  }
+}
+
+@media (max-width: 372px) {
+  .Footer {
+    max-width: 372px;
+    width: 100%;
+    .content {
+      .links {
+        display: none;
       }
     }
   }

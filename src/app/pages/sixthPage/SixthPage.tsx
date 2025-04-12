@@ -3,7 +3,7 @@ import Image from "next/image";
 import scss from "./SixthPage.module.scss";
 import Line from "../../../assets/images/Frame 10.png";
 import arrow from "../../../assets/images/arrow-right.svg";
-import phoneNumber from "../../../assets/images/SF Symbol.png";
+import phoneNumber from "../../../assets/images/SF Symbol2.png";
 import email from "../../../assets/images/email.png";
 import telegram from "../../../assets/images/Telegram.png";
 import instagram from "../../../assets/images/Instagram.png";
@@ -34,18 +34,20 @@ const SixthPage = () => {
             </div>
           </div>
           <div className={scss.image}>
-            <h2>contact Info</h2>
-            <div className={scss.phoneNumber}>
-              <Image src={phoneNumber} alt="" />
-              <p>+771219900</p>
-            </div>
-            <div className={scss.email}>
-              <Image src={email} alt="" />
-              <p>motionweb312@gmail.com</p>
-            </div>
-            <div className={scss.socials}>
-              <Image src={telegram} alt="" />
-              <Image src={instagram} alt="" />
+            <div className={scss.info}>
+              <h2>contact Info</h2>
+              <div className={scss.phoneNumber}>
+                <Image src={phoneNumber} alt="" />
+                <p>+771219900</p>
+              </div>
+              <div className={scss.email}>
+                <Image src={email} alt="" />
+                <p>motionweb312@gmail.com</p>
+              </div>
+              <div className={scss.socials}>
+                <Image src={telegram} alt="" />
+                <Image src={instagram} alt="" />
+              </div>
             </div>
             <div className={scss.map}>
               <Map />

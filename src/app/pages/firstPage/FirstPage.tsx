@@ -37,6 +37,7 @@ const FirstPage = () => {
         </div>
         <div
           style={state ? { display: "flex" } : { display: "none" }}
+          data-aos="fade-right"
           className={scss.Contact}
         >
           <div className={(scss.contactName, scss.contact)}>
@@ -71,7 +72,7 @@ const FirstPage = () => {
           <Image src={location} alt="" />
           Rua da moeda 1g,1200-275,Portugal
         </div>
-        <div className={scss.left}>
+        <div className={scss.right}>
           <h2>Hotline</h2>
           <div className={scss.line}></div>
           <Image src={hotline} alt="" />

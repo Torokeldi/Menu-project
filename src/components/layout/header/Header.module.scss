@@ -12,12 +12,14 @@
     align-items: center;
     justify-content: space-between;
     padding: 20px 58px;
+
     #logo {
       font-family: "font";
       color: rgba(255, 255, 255, 1);
       font-size: 28px;
       font-weight: 500;
     }
+
     .links {
       display: flex;
       gap: 82px;
@@ -28,10 +30,12 @@
         text-transform: capitalize;
       }
     }
+
     .actions {
       display: flex;
       align-items: center;
       gap: 100px;
+
       .Search {
         display: flex;
         flex-direction: row;
@@ -57,6 +61,25 @@
         input::placeholder {
           color: white;
         }
+      }
+    }
+    #burgerMenu {
+      display: none;
+    }
+  }
+}
+
+@media (max-width: 372px) {
+  .Header {
+    .content {
+      max-width: 372px;
+      width: 100%;
+      #burgerMenu {
+        display: initial;
+      }
+      .links,
+      .actions {
+        display: none;
       }
     }
   }

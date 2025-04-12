@@ -2,6 +2,7 @@ import Link from "next/link";
 import scss from "./Header.module.scss";
 import search from "./../../../assets/images/Group 6.png";
 import Image from "next/image";
+import burgerMenu from "../../../assets/images/textalign-justifyright.png";
 
 const Header = () => {
   return (
@@ -29,6 +30,7 @@ const Header = () => {
           </div>
           <span>EN</span>
         </div>
+        <Image id={scss.burgerMenu} src={burgerMenu} alt="" />
       </div>
     </div>
   );
