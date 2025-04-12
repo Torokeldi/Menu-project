@@ -27,8 +27,7 @@
 .about-us-info {
   display: flex;
   flex-direction: row;
-  gap: 191px;
-  flex-wrap: wrap;
+  justify-content: space-around;
   margin-bottom: 66px;
 }
 
@@ -53,16 +52,44 @@
   font-size: 1rem;
   font-weight: 400;
   line-height: 1.5;
-  max-width: 600px;
+  max-width: 539px;
+  display: flex;
+  flex-wrap: wrap;
 }
 
 .about-us-images {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 20px;
+  display: flex;
+  flex-direction: row;
+  gap: 32px;
+  justify-content: center;
+  align-items: center;
 }
 
 .about-us-img {
-  width: 48%;
-  height: auto;
+  width: 528px;
+  height: 303px;
+}
+
+@media (max-width: 1024px) {
+  .about-us-info {
+    gap: 60px;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .about-us-title,
+  .about-us-txt {
+    max-width: 90%;
+  }
+
+  .logo {
+    margin-top: 60px;
+    justify-content: center;
+  }
+  .about-us-images {
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+  }
 }
