@@ -6,7 +6,11 @@ import MainMenu from "@/app/pages/menuSections/MainMenu";
 import SixthPage from "@/app/pages/sixthPage/SixthPage";
 import AboutUs from "@/app/pages/AboutUs/AboutUs";
 import BestSellers from "@/app/pages/BestSellers/BestSellers";
+<<<<<<< HEAD
 import ModernInterier from "@/app/pages/modernInterier/modernInterier"
+=======
+import ModernInterier from './../../app/pages/modernInterier/modernInterier';
+>>>>>>> 0f0dcf3ee00896ea795ad80dc24a524de8302fa2
 
 const Layout = () => {
   return (

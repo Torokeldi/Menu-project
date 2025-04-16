@@ -127,3 +127,15 @@
     display: none;
   }
 }
+
+@media (max-width: 1024px) {
+  .logo {
+    align-items: center;
+    justify-content: center;
+  }
+  .bestSellers-content {
+    align-items: center;
+    flex-direction: column;
+    gap: 30px;
+  }
+}
