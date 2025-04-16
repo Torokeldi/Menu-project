@@ -4,7 +4,7 @@
   display: flex;
   flex-direction: column;
   flex: 1;
-  justify-content: space-between;
+  justify-content: space-around;
 }
 
 .logo {
@@ -27,7 +27,8 @@
 .about-us-info {
   display: flex;
   flex-direction: row;
-  gap: 191px;
+  justify-content: space-around;
+  gap: 30px;
   flex-wrap: wrap;
   margin-bottom: 66px;
 }
@@ -57,12 +58,56 @@
 }
 
 .about-us-images {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 20px;
+  display: flex;
+  flex-direction: row;
+  gap: 30px;
+  align-items: center;
+  justify-content: center;
 }
 
 .about-us-img {
-  width: 48%;
-  height: auto;
+  max-width: 558px;
+  max-height: 303px;
+}
+
+
+
+@media (max-width: 1068px) {
+  .about-us-content{
+    gap: 40px;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 50px;
+  }
+
+  .about-us-info {
+    gap: 40px;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .about-us-title,
+  .about-us-txt {
+    text-align: center;
+    max-width: 100%;
+  }
+
+  .about-us-images {
+    align-items: center;
+    flex-direction: column;
+    gap: 20px;
+    justify-content: center;
+    margin-bottom: 50px;
+  }
+
+  .about-us-img:first-child {
+    margin-bottom: 20px;
+  }
+
+  .logo {
+    margin-top: 50px;
+    justify-content: center;
+  }
 }
