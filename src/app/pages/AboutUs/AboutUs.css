@@ -48,13 +48,16 @@
   max-width: 600px;
 }
 
+.txt-block {
+  max-width: 539px;
+}
+
 .about-us-txt {
   color: #fff;
   font-family: "League Spartan", sans-serif;
   font-size: 1rem;
   font-weight: 400;
   line-height: 1.5;
-  max-width: 539px;
   display: flex;
   flex-wrap: wrap;
 }

@@ -17,13 +17,14 @@ const AboutUs = () => (
         <h1 className="about-us-title">
           A Journey Through <br /> Cafesio Flavors
         </h1>
-        <p className="about-us-txt">
-          Try dishes that will open up new tastes for you and delight your
-          eyes with their appearance. Here you will find a cozy 
-          atmosphere, excellent service, and attention to each guest. 
-          Book a table now and enjoy a unique experience of taste 
-          discovery!
-        </p>
+        <div className="txt-block">
+          <p className="about-us-txt">
+            Try dishes that will open up new tastes for you and delight your
+            eyes with their appearance. Here you will find a cozy atmosphere,
+            excellent service, and attention to each guest. Book a table now and
+            enjoy a unique experience of taste discovery!
+          </p>
+        </div>
       </div>
       <div className="about-us-images">
         <div className="about-us-img">
