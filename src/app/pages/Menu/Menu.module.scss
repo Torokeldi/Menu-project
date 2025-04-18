@@ -1,0 +1,206 @@
+@import url("https://fonts.googleapis.com/css2?family=Silk+Serif&display=swap");
+
+.menu {
+  &__content {
+    display: flex;
+    flex-direction: row;
+    align-items: start;
+    justify-content: space-around;
+    margin-top: 104px;
+  }
+  &__items {
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+    justify-content: center;
+    padding: 20px;
+  }
+
+  &__Btn {
+    width: 363px;
+    height: 66px;
+    background-color: rgb(31, 39, 49);
+    color: rgb(255, 255, 255);
+    font-family: "Silk Serif", serif;
+    font-size: 24px;
+    font-weight: 600;
+    border-radius: 5px;
+    border: none;
+    border-bottom: 1px solid rgb(255, 255, 255);
+    text-align: center;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+
+    &.active {
+      background-color: rgb(239, 39, 44);
+    }
+  }
+}
+
+.card {
+  &__grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(3, auto);
+    gap: 24px;
+  }
+  &__image {
+    width: 100%;
+    height: 100%;
+  }
+
+  &__imgBlock {
+    max-width: 329px;
+    max-height: 187px;
+  }
+
+  &__image {
+    width: 329px;
+    height: 187px;
+  }
+
+  &__name {
+    color: rgb(31, 39, 49);
+    font-family: Spartan, sans-serif;
+    font-size: 16px;
+    font-weight: 600;
+    margin-bottom: 6px;
+  }
+
+  &__description {
+    color: rgb(147, 147, 147);
+    font-family: Spartan, sans-serif;
+    font-size: 14px;
+    font-weight: 500;
+    flex-wrap: wrap;
+    width: 216px;
+  }
+
+  &__price {
+    color: rgb(239, 39, 44);
+    font-family: Spartan, sans-serif;
+    font-size: 16px;
+    font-weight: 600;
+  }
+
+  &__info {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px;
+    border-radius: 2px;
+    max-width: 329px;
+    background: rgb(255, 255, 255);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  }
+}
+
+@import url("https://fonts.googleapis.com/css2?family=League+Spartan:wght@100..900&display=swap");
+
+.selectCard {
+  width: 773px;
+  height: 250px;
+  border-radius: 2px;
+  background: rgb(31, 39, 49);
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  box-sizing: border-box;
+
+  &__info {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  &__imgBlock {
+    min-width: 329px;
+    max-height: 187px;
+    border-radius: 2px;
+  }
+  &__img {
+    width: 100%;
+    height: 100%;
+  }
+
+  &__details {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 8px;
+    padding: 12px;
+  }
+
+  &__txt {
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+
+    &__name {
+      color: rgb(255, 255, 255);
+      font-family: "League Spartan", sans-serif;
+      font-size: 16px;
+      font-weight: 600;
+      line-height: 18px;
+    }
+
+    &__desc {
+      color: rgb(187, 187, 187);
+      font-family: "League Spartan", sans-serif;
+      font-size: 14px;
+      font-weight: 500;
+      line-height: 16px;
+      letter-spacing: 0.5px;
+      flex-wrap: wrap;
+      width: 216px;
+    }
+  }
+
+  &__price {
+    color: #ef272c;
+    font-family: "League Spartan", sans-serif;
+    font-size: 16px;
+    font-weight: 600;
+  }
+
+  &__extrasDrinks {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    padding: 25px;
+  }
+
+  &__section {
+    margin-bottom: 16px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    gap: 12px;
+
+    &__title {
+      color: #ffffff;
+      font-family: "League Spartan", sans-serif;
+      font-size: 18px;
+      font-weight: 600;
+      margin: 0 0 8px 0;
+    }
+  }
+
+  &__itemList {
+    display: flex;
+    justify-content: space-around;
+    gap: 226px;
+
+    &__item,
+    &__priceList {
+      display: flex;
+      flex-direction: column;
+      color: #939393;
+      font-family: "League Spartan", sans-serif;
+      font-size: 15px;
+      font-weight: 500;
+    }
+  }
+}
+

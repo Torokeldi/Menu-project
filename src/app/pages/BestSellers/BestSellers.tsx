@@ -1,6 +1,6 @@
 "use client";
 import React, { useState } from "react";
-import Image from "next/image";
+import Image, { StaticImageData } from "next/image";
 import Line from "../../../assets/images/Frame 10.png";
 import BestSellersImg from "../../../assets/images/Frame 15.png";
 import BestSellersImg2 from "../../../assets/images/Frame 16.png";
@@ -16,7 +16,7 @@ import Shevron1 from "../../../assets/images/Shevron1.svg";
 import Shevron2 from "../../../assets/images/Shevron2.svg";
 import "@/app/pages/BestSellers/BestSellers.css";
 
-const images = [
+const images: StaticImageData[] = [
   BestSellersImg,
   BestSellersImg2,
   BestSellersImg3,
@@ -29,8 +29,8 @@ const images = [
   BestSellersImg10,
 ];
 
-function BestSellers() {
-  const [currentIndex, setCurrentIndex] = useState(0);
+const BestSellers: React.FC = () => {
+  const [currentIndex, setCurrentIndex] = useState<number>(0);
 
   const nextSlide = () => {
     setCurrentIndex((prevIndex) => {
@@ -58,8 +58,8 @@ function BestSellers() {
             You Only Reserve <br /> Exception
           </h1>
           <p className="bestSellers-txt">
-            Each location has a menu that`s curated just for them. <br />
-            See what new at your Cafesio and you`ll find Cafesio <br />
+            Each location has a menu that's curated just for them. <br />
+            See what's new at your Cafesio and you'll find Cafesio <br />
             Covent Garden moments.
           </p>
         </div>
@@ -73,18 +73,16 @@ function BestSellers() {
 
           <div className="slider-window">
             <div className="bestSellers-track">
-              {images
-                .slice(currentIndex, currentIndex + 2)
-                .map((src, index) => (
-                  <div className="bestSellers-img" key={index}>
-                    <Image
-                      src={src}
-                      width={266}
-                      height={281}
-                      alt={`Best seller ${index + 1}`}
-                    />
-                  </div>
-                ))}
+              {images.slice(currentIndex, currentIndex + 2).map((src, index) => (
+                <div className="bestSellers-img" key={index}>
+                  <Image
+                    src={src}
+                    width={266}
+                    height={281}
+                    alt={`Best seller ${currentIndex + index + 1}`}
+                  />
+                </div>
+              ))}
             </div>
           </div>
 
@@ -97,6 +95,6 @@ function BestSellers() {
       </div>
     </div>
   );
-}
+};
 
 export default BestSellers;

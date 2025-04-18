@@ -1,0 +1,107 @@
+@import url("https://fonts.googleapis.com/css2?family=League+Spartan:wght@100..900&display=swap");
+
+.selectCard {
+  width: 773px;
+  height: 250px;
+  border-radius: 2px;
+  background: rgb(31, 39, 49);
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  box-sizing: border-box;
+
+  &__info {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  &__imgBlock {
+    min-width: 329px;
+    max-height: 187px;
+    border-radius: 2px;
+  }
+  &__img {
+    width: 100%;
+    height: 100%;
+  }
+
+  &__details {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 8px;
+    padding: 12px;
+  }
+
+  &__txt {
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+
+    &__name {
+      color: rgb(255, 255, 255);
+      font-family: "League Spartan", sans-serif;
+      font-size: 16px;
+      font-weight: 600;
+      line-height: 18px;
+    }
+
+    &__desc {
+      color: rgb(187, 187, 187);
+      font-family: "League Spartan", sans-serif;
+      font-size: 14px;
+      font-weight: 500;
+      line-height: 16px;
+      letter-spacing: 0.5px;
+      flex-wrap: wrap;
+      width: 216px;
+    }
+  }
+
+  &__price {
+    color: #ef272c;
+    font-family: "League Spartan", sans-serif;
+    font-size: 16px;
+    font-weight: 600;
+  }
+
+  &__extrasDrinks {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    padding: 25px;
+  }
+
+  &__section {
+    margin-bottom: 16px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    gap: 12px;
+
+    &__title {
+      color: #ffffff;
+      font-family: "League Spartan", sans-serif;
+      font-size: 18px;
+      font-weight: 600;
+      margin: 0 0 8px 0;
+    }
+  }
+
+  &__itemList {
+    display: flex;
+    justify-content: space-around;
+    gap: 226px;
+
+    &__item,
+    &__priceList {
+      display: flex;
+      flex-direction: column;
+      color: #939393;
+      font-family: "League Spartan", sans-serif;
+      font-size: 15px;
+      font-weight: 500;
+    }
+  }
+}
