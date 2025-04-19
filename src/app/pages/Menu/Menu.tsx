@@ -1,8 +1,12 @@
 "use client";
-import React, { useEffect, useState } from "react";
-import styles from "./Menu.module.scss";
+
+import * as React from "react";
+import { useState, useEffect } from "react";
 import Image from "next/image";
-import Card from "../../../components/Card/Card";
+import styles from "./Menu.module.scss";
+
+type ExtraType = { name: string; price: string };
+type DrinkType = { name: string; price: string };
 
 type CardType = {
   id: number;
@@ -11,7 +15,18 @@ type CardType = {
   price: string;
   img: string;
   category: string;
+  extras?: ExtraType[];
+  drinks?: DrinkType[];
 };
+
+const categories: string[] = [
+  "Desserts",
+  "Hot Drinks",
+  "Cold Drinks",
+  "National Foods",
+  "Eastern cuisine",
+  "Fast foods",
+];
 
 const Menu: React.FC = () => {
   const [activeButton, setActiveButton] = useState<number | null>(null);
@@ -22,7 +37,7 @@ const Menu: React.FC = () => {
   useEffect(() => {
     fetch("http://localhost:3001/products")
       .then((res) => res.json())
-      .then((data) => {
+      .then((data: CardType[]) => {
         setCardData(data);
         setFilteredData(data);
       })
@@ -36,58 +51,105 @@ const Menu: React.FC = () => {
   };
 
   const handleCardClick = (card: CardType) => {
-    setSelectedCard(card);
+    if (selectedCard?.id === card.id) {
+      setSelectedCard(null);
+    } else {
+      setSelectedCard(card);
+    }
   };
 
   return (
     <div className={styles.menu}>
       <div className={styles.menu__content}>
         <div className={styles.menu__items}>
-          {[
-            "Desserts",
-            "Hot Drinks",
-            "Cold Drinks",
-            "National Foods",
-            "Eastern cuisine",
-            "Fast foods",
-          ].map((item, index) => (
+          {categories.map((item, index) => (
             <button
               key={index}
-              className={`${styles.menu__Btn} ${activeButton === index ? styles.active : ""}`}
+              className={`${styles.menu__Btn} ${
+                activeButton === index ? styles.active : ""
+              }`}
               onClick={() => handleButtonClick(index, item)}
-              aria-label={`Select ${item}`}
             >
               {item}
             </button>
           ))}
         </div>
+
         <div className={styles.card__grid}>
           {filteredData.map((card) => (
             <div
               key={card.id}
-              className={styles.card}
+              className={`${styles.card} ${
+                selectedCard?.id === card.id ? styles.expanded : ""
+              }`}
               onClick={() => handleCardClick(card)}
             >
-              <div className={styles.card__imgBlock}>
-                <Image
-                  src={card.img}
-                  alt={card.name}
-                  className={styles.card__image}
-                  width={329}
-                  height={187}
-                />
-              </div>
-              <div className={styles.card__info}>
+              <div className={styles.card__main}>
                 <div>
-                  <div className={styles.card__name}>{card.name}</div>
-                  <div className={styles.card__description}>{card.description}</div>
+                  <div className={styles.card__imgBlock}>
+                    <Image
+                      src={card.img}
+                      alt={card.name}
+                      className={styles.card__image}
+                      width={329}
+                      height={187}
+                    />
+                  </div>
+                  <div className={styles.card__info}>
+                    <div>
+                      <div className={styles.card__name}>{card.name}</div>
+                      <div className={styles.card__description}>
+                        {card.description}
+                      </div>
+                    </div>
+                    <div className={styles.card__price}>{card.price}</div>
+                  </div>
                 </div>
-                <div className={styles.card__price}>{card.price}</div>
+                <div
+                  className={`${styles.expandableSection} ${
+                    selectedCard?.id === card.id ? styles.open : ""
+                  }`}
+                >
+                  {selectedCard?.id === card.id && (
+                    <div
+                      className={`${styles.expandableSection} ${styles.open}`}
+                    >
+                      <div className={styles.selectCard__extrasDrinks}>
+                        <section className={styles.selectCard__section}>
+                          <h1 className={styles.selectCard__title}>Extras</h1>
+                          <div className={styles.selectCard__itemList}>
+                            <div className={styles.selectCard__item}>
+                              <p style={{ marginBottom: "10px" }}>Apple</p>
+                              <p>Cherry</p>
+                            </div>
+                            <div className={styles.selectCard__priceList}>
+                              <p style={{ marginBottom: "10px" }}>$4.30</p>
+                              <p>$8.30</p>
+                            </div>
+                          </div>
+                        </section>
+
+                        <section className={styles.selectCard__section}>
+                          <h1 className={styles.selectCard__title}>Drinks</h1>
+                          <div className={styles.selectCard__itemList}>
+                            <div className={styles.selectCard__item}>
+                              <p style={{ marginBottom: "10px" }}>Fanta</p>
+                              <p>Coca Cola</p>
+                            </div>
+                            <div className={styles.selectCard__priceList}>
+                              <p style={{ marginBottom: "10px" }}>$9.10</p>
+                              <p>$9.30</p>
+                            </div>
+                          </div>
+                        </section>
+                      </div>
+                    </div>
+                  )}
+                </div>
               </div>
             </div>
           ))}
         </div>
-        {selectedCard && <Card card={selectedCard} />}
       </div>
     </div>
   );
