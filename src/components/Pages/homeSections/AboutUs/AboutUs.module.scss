@@ -1,6 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=League+Spartan:wght@100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Pixelify+Sans:wght@400..700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Rubik:ital,wght@0,300..900;1,300..900&family=Shalimar&display=swap");
 
-.about-us-content {
+.aboutUsContent {
   display: flex;
   flex-direction: column;
   flex: 1;
@@ -17,14 +17,14 @@
   flex-shrink: 0;
 }
 
-.about-us {
+.aboutUs {
   color: #fff;
   font-family: "Shalimar", sans-serif;
   font-size: 2.5rem;
   font-weight: 400;
 }
 
-.about-us-info {
+.aboutUsInfo {
   display: flex;
   flex-direction: row;
   justify-content: space-around;
@@ -33,13 +33,13 @@
   margin-bottom: 66px;
 }
 
-.about-us-title,
-.about-us-txt {
+.aboutUsTitle,
+.aboutUsTxt {
   flex: 1;
   min-width: 300px;
 }
 
-.about-us-title {
+.aboutUsTitle {
   color: #fff;
   font-family: Silk Serif;
   font-size: 2.5rem;
@@ -48,11 +48,11 @@
   max-width: 600px;
 }
 
-.txt-block {
+.txtBlock {
   max-width: 539px;
 }
 
-.about-us-txt {
+.aboutUsTxt {
   color: #fff;
   font-family: "League Spartan", sans-serif;
   font-size: 1rem;
@@ -62,7 +62,7 @@
   flex-wrap: wrap;
 }
 
-.about-us-images {
+.aboutUsImages {
   display: flex;
   flex-direction: row;
   gap: 30px;
@@ -70,13 +70,13 @@
   justify-content: center;
 }
 
-.about-us-img {
+.aboutUsImg {
   max-width: 558px;
   max-height: 303px;
 }
 
 @media (max-width: 1068px) {
-  .about-us-content {
+  .aboutUsContent {
     gap: 40px;
     flex-direction: column;
     align-items: center;
@@ -84,20 +84,20 @@
     margin-bottom: 50px;
   }
 
-  .about-us-info {
+  .aboutUsInfo {
     gap: 40px;
     flex-direction: column;
     align-items: center;
     justify-content: center;
   }
 
-  .about-us-title,
-  .about-us-txt {
+  .aboutUsTitle,
+  .aboutUsTxt {
     text-align: center;
     max-width: 100%;
   }
 
-  .about-us-images {
+  .aboutUsImages {
     align-items: center;
     flex-direction: column;
     gap: 20px;
@@ -105,7 +105,7 @@
     margin-bottom: 50px;
   }
 
-  .about-us-img:first-child {
+  .aboutUsImg:first-child {
     margin-bottom: 20px;
   }
 
@@ -114,22 +114,22 @@
     justify-content: center;
   }
 
-  .about-us-img {
+  .aboutUsImg {
     width: 528px;
     height: 303px;
   }
 }
 
 @media (max-width: 1024px) {
-  .about-us-info {
+  .aboutUsInfo {
     gap: 60px;
     flex-direction: column;
     align-items: center;
     text-align: center;
   }
 
-  .about-us-title,
-  .about-us-txt {
+  .aboutUsTitle,
+  .aboutUsTxt {
     max-width: 90%;
   }
 
@@ -137,7 +137,8 @@
     margin-top: 60px;
     justify-content: center;
   }
-  .about-us-images {
+
+  .aboutUsImages {
     flex-direction: column;
     gap: 20px;
     align-items: center;
