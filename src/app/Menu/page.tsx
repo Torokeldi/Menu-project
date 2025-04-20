@@ -28,7 +28,7 @@ const categories: string[] = [
   "Fast foods",
 ];
 
-const Menu: React.FC = () => {
+export default function Menu() {
   const [activeButton, setActiveButton] = useState<number | null>(null);
   const [selectedCard, setSelectedCard] = useState<CardType | null>(null);
   const [cardData, setCardData] = useState<CardType[]>([]);
@@ -65,9 +65,7 @@ const Menu: React.FC = () => {
           {categories.map((item, index) => (
             <button
               key={index}
-              className={`${styles.menu__Btn} ${
-                activeButton === index ? styles.active : ""
-              }`}
+              className={`${styles.menu__Btn} ${activeButton === index ? styles.active : ""}`}
               onClick={() => handleButtonClick(index, item)}
             >
               {item}
@@ -79,9 +77,7 @@ const Menu: React.FC = () => {
           {filteredData.map((card) => (
             <div
               key={card.id}
-              className={`${styles.card} ${
-                selectedCard?.id === card.id ? styles.expanded : ""
-              }`}
+              className={`${styles.card} ${selectedCard?.id === card.id ? styles.expanded : ""}`}
               onClick={() => handleCardClick(card)}
             >
               <div className={styles.card__main}>
@@ -98,54 +94,45 @@ const Menu: React.FC = () => {
                   <div className={styles.card__info}>
                     <div>
                       <div className={styles.card__name}>{card.name}</div>
-                      <div className={styles.card__description}>
-                        {card.description}
-                      </div>
+                      <div className={styles.card__description}>{card.description}</div>
                     </div>
                     <div className={styles.card__price}>{card.price}</div>
                   </div>
                 </div>
-                <div
-                  className={`${styles.expandableSection} ${
-                    selectedCard?.id === card.id ? styles.open : ""
-                  }`}
-                >
-                  {selectedCard?.id === card.id && (
-                    <div
-                      className={`${styles.expandableSection} ${styles.open}`}
-                    >
-                      <div className={styles.selectCard__extrasDrinks}>
-                        <section className={styles.selectCard__section}>
-                          <h1 className={styles.selectCard__title}>Extras</h1>
-                          <div className={styles.selectCard__itemList}>
-                            <div className={styles.selectCard__item}>
-                              <p style={{ marginBottom: "10px" }}>Apple</p>
-                              <p>Cherry</p>
-                            </div>
-                            <div className={styles.selectCard__priceList}>
-                              <p style={{ marginBottom: "10px" }}>$4.30</p>
-                              <p>$8.30</p>
-                            </div>
-                          </div>
-                        </section>
 
-                        <section className={styles.selectCard__section}>
-                          <h1 className={styles.selectCard__title}>Drinks</h1>
-                          <div className={styles.selectCard__itemList}>
-                            <div className={styles.selectCard__item}>
-                              <p style={{ marginBottom: "10px" }}>Fanta</p>
-                              <p>Coca Cola</p>
-                            </div>
-                            <div className={styles.selectCard__priceList}>
-                              <p style={{ marginBottom: "10px" }}>$9.10</p>
-                              <p>$9.30</p>
-                            </div>
+                {selectedCard?.id === card.id && (
+                  <div className={`${styles.expandableSection} ${styles.open}`}>
+                    <div className={styles.selectCard__extrasDrinks}>
+                      <section className={styles.selectCard__section}>
+                        <h1 className={styles.selectCard__title}>Extras</h1>
+                        <div className={styles.selectCard__itemList}>
+                          <div className={styles.selectCard__item}>
+                            <p style={{ marginBottom: "10px" }}>Apple</p>
+                            <p>Cherry</p>
                           </div>
-                        </section>
-                      </div>
+                          <div className={styles.selectCard__priceList}>
+                            <p style={{ marginBottom: "10px" }}>$4.30</p>
+                            <p>$8.30</p>
+                          </div>
+                        </div>
+                      </section>
+
+                      <section className={styles.selectCard__section}>
+                        <h1 className={styles.selectCard__title}>Drinks</h1>
+                        <div className={styles.selectCard__itemList}>
+                          <div className={styles.selectCard__item}>
+                            <p style={{ marginBottom: "10px" }}>Fanta</p>
+                            <p>Coca Cola</p>
+                          </div>
+                          <div className={styles.selectCard__priceList}>
+                            <p style={{ marginBottom: "10px" }}>$9.10</p>
+                            <p>$9.30</p>
+                          </div>
+                        </div>
+                      </section>
                     </div>
-                  )}
-                </div>
+                  </div>
+                )}
               </div>
             </div>
           ))}
@@ -153,6 +140,4 @@ const Menu: React.FC = () => {
       </div>
     </div>
   );
-};
-
-export default Menu;
+}

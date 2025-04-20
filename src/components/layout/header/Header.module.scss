@@ -1,8 +1,8 @@
 @font-face {
-  font-family: "font";
-  src: url("./../../../assets/fonts/SilkSerif-TRIAL-Regular-BF6740066e17571.ttf")
+  font-family: Silk Serif;
+  src: url("../../../assets/fonts/SilkSerif-TRIAL-Bold-BF6740066e7ab50.ttf")
     format("woff2");
-  font-style: normal;
+  font-style: bold;
 }
 
 .Header {
@@ -14,7 +14,7 @@
     padding: 20px 58px;
 
     #logo {
-      font-family: "font";
+      font-family: Silk Serif;
       color: rgba(255, 255, 255, 1);
       font-size: 28px;
       font-weight: 500;
@@ -28,6 +28,7 @@
         font-weight: 300;
         font-size: 16px;
         text-transform: capitalize;
+        cursor: pointer;
       }
     }
 

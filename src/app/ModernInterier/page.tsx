@@ -9,10 +9,12 @@ import images_2 from "@/assets/modern interior/images_2.png";
 import images_3 from "@/assets/modern interior/images_3.png";
 import images_4 from "@/assets/modern interior/images_4.png";
 import images_5 from "@/assets/modern interior/images_5.png";
+import { Element } from "react-scroll";
 
 const ModernInterier = () => {
   return (
-    <section className={scss.ModernInterior} id="interior">
+    <Element name="ModernInterier">
+    <section className={scss.ModernInterior}>
       <div className="container">
         <div className={scss.content}>
           <div className={scss.modern}>
@@ -50,6 +52,7 @@ const ModernInterier = () => {
         </div>
       </div>
     </section>
+    </Element>
   );
 };
 
