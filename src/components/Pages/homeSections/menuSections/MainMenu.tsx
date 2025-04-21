@@ -71,7 +71,7 @@ const MainMenu = () => {
               </div>
             </div>
             <div className={scss.view_all_button}>
-              <Link href="/Menu">
+              <Link href="/menu">
                 <button className={scss.button}>
                   View Full Menu <FaArrowRight className={scss.button_icon} />
                 </button>

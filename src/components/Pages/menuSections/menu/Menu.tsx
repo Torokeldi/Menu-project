@@ -65,7 +65,7 @@ export default function Menu() {
           {categories.map((item, index) => (
             <button
               key={index}
-              className={${styles.menu__Btn} ${activeButton === index ? styles.active : ""}}
+              className={`${styles.menu__Btn} ${activeButton === index ? styles.active : ""}`}
               onClick={() => handleButtonClick(index, item)}
             >
               {item}
@@ -77,7 +77,7 @@ export default function Menu() {
           {filteredData.map((card) => (
             <div
               key={card.id}
-              className={${styles.card} ${selectedCard?.id === card.id ? styles.expanded : ""}}
+              className={`${styles.card} ${selectedCard?.id === card.id ? styles.expanded : ""}`}
               onClick={() => handleCardClick(card)}
             >
               <div className={styles.card__main}>
@@ -101,7 +101,7 @@ export default function Menu() {
                 </div>
 
                 {selectedCard?.id === card.id && (
-                  <div className={${styles.expandableSection} ${styles.open}}>
+                  <div className={`${styles.expandableSection} ${styles.open}`}>
                     <div className={styles.selectCard__extrasDrinks}>
                       <section className={styles.selectCard__section}>
                         <h1 className={styles.selectCard__title}>Extras</h1>
