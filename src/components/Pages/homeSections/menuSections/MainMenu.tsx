@@ -34,7 +34,7 @@ const MainMenu = () => {
   const [selectedCategory, setSelectedCategory] = useState<string | null>(null);
 
   return (
-    <Element name="MainMenu">
+    <div id="menu">
       <section className={scss.MainMenu}>
         <div className="container">
           <div className={scss.MainMenu}>
@@ -83,7 +83,7 @@ const MainMenu = () => {
           </div>
         </div>
       </section>
-    </Element>
+    </div>
   );
 };
 

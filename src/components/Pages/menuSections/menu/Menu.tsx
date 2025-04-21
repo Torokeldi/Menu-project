@@ -81,7 +81,7 @@ export default function Menu() {
               onClick={() => handleCardClick(card)}
             >
               <div className={styles.card__main}>
-                <div>
+                <div className={styles.card__block}>
                   <div className={styles.card__imgBlock}>
                     <Image
                       src={card.img}

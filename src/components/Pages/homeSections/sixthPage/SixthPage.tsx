@@ -13,7 +13,7 @@ const Map = dynamic(() => import("@/components/Map"), { ssr: false });
 
 const SixthPage = () => {
   return (
-    <div className={scss.SixthPage}>
+    <div className={scss.SixthPage} id="sixthpage">
       <div className="container">
         <div className={scss.content}>
           <div className={scss.text}>

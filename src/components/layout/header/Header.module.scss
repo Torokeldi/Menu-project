@@ -4,9 +4,9 @@
   left: 0;
   width: 100%;
   z-index: 1000;
-  background-color: rgba(0, 0, 0, 0.8); // Можно настроить под нужный цвет и прозрачность
-  backdrop-filter: blur(6px); // Необязательно: добавляет эффект блюра
-  -webkit-backdrop-filter: blur(6px); // Safari поддержка
+  background-color: rgba(0, 0, 0, 0.8);
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
 
   .content {
     display: flex;
@@ -73,20 +73,9 @@
   }
 }
 
-@media (max-width: 372px) {
-  .Header {
-    .content {
-      max-width: 372px;
-      width: 100%;
-
-      #burgerMenu {
-        display: initial;
-      }
-
-      .links,
-      .actions {
-        display: none;
-      }
-    }
+@media (max-width: 1050px) {
+  .content {
+    display: flex;
+    flex-direction: column;
   }
 }
