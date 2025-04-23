@@ -1,7 +1,6 @@
 "use client";
 import Image from "next/image";
 import scss from "./FirstPage.module.scss";
-import background from "@/assets/images/7f1e8f5dc71cb5f6dbeadcbe52587e2d.png";
 import Line from "@/assets/images/Frame 10.png";
 import Line2 from "@/assets/images/Frame 9.png";
 import arrow from "@/assets/images/arrow-right.svg";
