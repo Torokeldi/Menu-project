@@ -2,7 +2,7 @@
 @import url("https://fonts.googleapis.com/css2?family=League+Spartan:wght@100..900&family=Shalimar&display=swap");
 @font-face {
   font-family: Silk Serif;
-  src: url("../../../../assets/fonts/SilkSerif-TRIAL-Bold-BF6740066e7ab50.ttf")
+  src: url("../../../../../assets/fonts/SilkSerif-TRIAL-Bold-BF6740066e7ab50.ttf")
     format("woff2");
   font-style: bold;
 }
@@ -155,48 +155,6 @@
       font-family: "League Spartan", sans-serif;
       font-size: 15px;
       font-weight: 500;
-    }
-  }
-}
-
-@media (max-width: 1098px) {
-  .menu {
-    &__items {
-      display: flex;
-      flex-direction: row;
-      gap: 8px;
-    }
-    &__Btn {
-      padding: 19px;
-      font-size: 14px;
-      font-weight: 500;
-      line-height: 16px;
-      border: 0.5px solid rgb(24, 24, 24);
-      border-radius: 2px;
-      background: rgb(0, 0, 0);
-      width: auto;
-      height: 42px;
-      font-family: "League Spartan", sans-serif;
-      text-align: center;
-    }
-  }
-}
-
-@media (max-width: 766px) {
-  .menu {
-    &__items {
-      display: flex;
-      flex-direction: row;
-      gap: 8px;
-      overflow-x: auto;
-      scroll-snap-type: x mandatory;
-      width: 200px;
-    }
-    &__Btn {
-      width: auto;
-      text-align: center;
-      scroll-snap-align: start;
-      flex-shrink: 0;
     }
   }
 }
