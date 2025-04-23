@@ -7,7 +7,12 @@
 }
 html {
   background: rgba(27, 32, 38, 1);
+    scroll-behavior: smooth;
 }
+section {
+  scroll-margin-top: 120px; // соответствие высоте хедера
+}
+
 body {
   font-family: "League Spartan", sans-serif;
   color: white;

@@ -1,0 +1,202 @@
+@import url("https://fonts.googleapis.com/css2?family=League+Spartan:wght@100..900&family=Shalimar&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=League+Spartan:wght@100..900&family=Shalimar&display=swap");
+@font-face {
+  font-family: Silk Serif;
+  src: url("../../../../assets/fonts/SilkSerif-TRIAL-Bold-BF6740066e7ab50.ttf")
+    format("woff2");
+  font-style: bold;
+}
+
+.menu {
+  &__content {
+    display: flex;
+    flex-direction: row;
+    align-items: start;
+    justify-content: space-around;
+    margin-top: 104px;
+  }
+  &__items {
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+    justify-content: center;
+    padding: 20px;
+  }
+
+  &__Btn {
+    width: 363px;
+    height: 66px;
+    background-color: rgb(31, 39, 49);
+    color: rgb(255, 255, 255);
+    font-family: "Silk Serif", serif;
+    font-size: 24px;
+    font-weight: 600;
+    border-radius: 5px;
+    border: none;
+    border-bottom: 1px solid rgb(255, 255, 255);
+    text-align: center;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+
+    &.active {
+      background-color: rgb(239, 39, 44);
+    }
+  }
+}
+
+.card {
+  grid-column: span 1;
+  transition: all 0.3s ease;
+  &__grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 24px;
+  }
+  &__main {
+    display: flex;
+    flex-direction: row;
+  }
+
+  &__imgBlock {
+    max-width: 329px;
+    max-height: 187px;
+  }
+
+  &__image {
+    width: 329px;
+    height: 187px;
+  }
+
+  &__name {
+    color: rgb(31, 39, 49);
+    font-family: Spartan, sans-serif;
+    font-size: 16px;
+    font-weight: 600;
+    margin-bottom: 6px;
+  }
+
+  &__description {
+    color: rgb(147, 147, 147);
+    font-family: Spartan, sans-serif;
+    font-size: 14px;
+    font-weight: 500;
+    flex-wrap: wrap;
+    width: 216px;
+  }
+
+  &__price {
+    color: rgb(239, 39, 44);
+    font-family: Spartan, sans-serif;
+    font-size: 16px;
+    font-weight: 600;
+  }
+
+  &__info {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px;
+    border-radius: 2px;
+    max-width: 329px;
+    background: rgb(255, 255, 255);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  }
+}
+
+.expandableSection {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.5s ease, padding 0.5s ease;
+}
+
+.open {
+  max-height: 1000px;
+  padding-top: 20px;
+}
+.expanded {
+  grid-column: span 2;
+}
+
+.selectCard {
+  &__extrasDrinks {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    padding: 25px;
+  }
+
+  &__section {
+    margin-bottom: 16px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    gap: 12px;
+
+    &__title {
+      color: #ffffff;
+      font-family: "League Spartan", sans-serif;
+      font-size: 18px;
+      font-weight: 600;
+      margin: 0 0 8px 0;
+    }
+  }
+
+  &__itemList {
+    display: flex;
+    justify-content: space-around;
+    gap: 226px;
+
+    &__item,
+    &__priceList {
+      display: flex;
+      flex-direction: column;
+      color: #939393;
+      font-family: "League Spartan", sans-serif;
+      font-size: 15px;
+      font-weight: 500;
+    }
+  }
+}
+
+@media (max-width: 1098px) {
+  .menu {
+    &__items {
+      display: flex;
+      flex-direction: row;
+      gap: 8px;
+    }
+    &__Btn {
+      padding: 19px;
+      font-size: 14px;
+      font-weight: 500;
+      line-height: 16px;
+      border: 0.5px solid rgb(24, 24, 24);
+      border-radius: 2px;
+      background: rgb(0, 0, 0);
+      width: auto;
+      height: 42px;
+      font-family: "League Spartan", sans-serif;
+      text-align: center;
+    }
+  }
+}
+
+@media (max-width: 766px) {
+  .menu {
+    &__items {
+      display: flex;
+      flex-direction: row;
+      gap: 8px;
+      overflow-x: auto;
+      scroll-snap-type: x mandatory;
+      width: 200px;
+    }
+    &__Btn {
+      width: auto;
+      text-align: center;
+      scroll-snap-align: start;
+      flex-shrink: 0;
+    }
+  }
+}

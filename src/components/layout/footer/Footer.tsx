@@ -1,12 +1,12 @@
 import Link from "next/link";
 import scss from "./Footer.module.scss";
 import Image from "next/image";
-import socialMedia1 from "./../../../assets/images/Vector (8).png";
-import socialMedia2 from "./../../../assets/images/Subtract.png";
+import socialMedia1 from "@/assets/images/Vector (8).png";
+import socialMedia2 from "@/assets/images/Subtract.png";
 
 const Footer = () => {
   return (
-    <div className={scss.Footer}>
+    <div className={scss.Footer} id="footer">
       <div className={scss.content}>
         <h1 id={scss.logo}>Restaurant</h1>
         <div className={scss.links}>
