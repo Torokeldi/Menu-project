@@ -1,5 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=League+Spartan:wght@100..900&family=Shalimar&display=swap");
-@import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@100..900&family=Shalimar&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=League+Spartan:wght@100..900&family=Shalimar&display=swap");
 @font-face {
   font-family: Silk Serif;
   src: url("../../../../assets/fonts/SilkSerif-TRIAL-Bold-BF6740066e7ab50.ttf")
@@ -77,11 +77,10 @@
           text-align: center;
         }
 
-        /* Стиль при нажатии */
         &.selected {
-          background-color: rgb(239, 39, 44); /* Красный цвет фона */
+          background-color: rgb(239, 39, 44);
           .button_text {
-            color: #fff; /* Белый текст */
+            color: #fff;
           }
         }
       }
@@ -144,4 +143,42 @@
       left: 0;
     }
   }
+}
+
+.menu_item_box {
+  display: flex;
+  justify-content: space-between;
+  width: 605px;
+  height: 106px;
+}
+
+.menu_item {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.item_name {
+  color: rgb(255, 255, 255);
+  font-family: Silk Serif;
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 31px;
+}
+
+.item_description {
+  width: 312px;
+  color: rgb(255, 255, 255);
+  font-family: "League Spartan", sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 20px;
+}
+
+.item_price {
+  color: rgb(239, 39, 44);
+  font-family: Silk Serif;
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 31px;
 }

@@ -6,6 +6,7 @@ import styles from "./MenuMobile.module.scss";
 import { StaticImport } from "next/dist/shared/lib/get-img-props";
 import { FaSearch } from "react-icons/fa";
 import line from "@/assets/images/Frame 10.png";
+import { names } from './../../../../../../.next/server/vendor-chunks/next';
 
 type MenuItem = {
   [x: string]: string | StaticImport;
@@ -79,7 +80,7 @@ export default function MenuPage() {
                 <div className={styles.imageWrapper}>
                   <Image
                     src={item.img}
-                    alt={item.title}
+                    alt={item.name}
                     fill
                     className={styles.itemImage}
                   />
